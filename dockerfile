@@ -1,0 +1,7 @@
+FROM python:3.9-slim-buster
+WORKDIR /app
+COPY . /app
+#RUN python3 -m venv facedetection
+#RUN source facedetection/bin/activate
+RUN pip install -r requirements.txt
+CMD [ "python","main.py" ]
